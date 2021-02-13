@@ -11,9 +11,11 @@ RSpec.describe FeatureValuesController, type: :request do
         before(:each) do
             get '/feature_values'
         end
+        
         it 'returns all feature values' do
             expect(JSON.parse(response.body).size).to eq(3)
         end
+
         it 'returns status code 200' do
             expect(response).to have_http_status(:success)
         end

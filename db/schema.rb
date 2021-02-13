@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_12_154750) do
+ActiveRecord::Schema.define(version: 2021_02_13_115445) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -28,12 +28,40 @@ ActiveRecord::Schema.define(version: 2021_02_12_154750) do
     t.index ["feature_id"], name: "index_feature_values_on_feature_id"
   end
 
+  create_table "feature_values_limit_values", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "feature_value_id", null: false
+    t.bigint "limit_value_id", null: false
+  end
+
   create_table "features", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.bigint "brand_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["brand_id"], name: "index_features_on_brand_id"
+  end
+
+  create_table "limit_values", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "limit_id"
+    t.bigint "feature_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["feature_id"], name: "index_limit_values_on_feature_id"
+    t.index ["limit_id"], name: "index_limit_values_on_limit_id"
+  end
+
+  create_table "limits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "feature_value_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["feature_value_id"], name: "index_limits_on_feature_value_id"
+  end
+
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.float "amount"
+    t.text "items", size: :medium, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

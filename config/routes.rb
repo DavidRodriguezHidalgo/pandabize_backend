@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :brands, only: :index
   resources :features, only: [:index]
   resources :feature_values, only: [:index]
+  resources :orders, only: [:index, :create]
 end
