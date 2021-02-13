@@ -31,4 +31,18 @@ describe BrandsController, :type => :request do
             expect(response).to have_http_status(:success)
         end
     end 
+
+    context 'we should get all the brands in stock' do
+        let!(:brand){	create(:brand)	}
+
+        before(:each) do
+            get "/brands/#{brand.id}"
+        end
+        it 'returns a brand with the id' do
+            expect(JSON.parse(response.body)['id']).to eq(brand.id)
+        end
+        it 'returns status code 200' do
+            expect(response).to have_http_status(:success)
+        end
+    end 
 end

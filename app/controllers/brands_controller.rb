@@ -6,4 +6,14 @@ class BrandsController < ApplicationController
             }
         })
     end
+
+    def show
+        render json: Brand.find(params[:id]).to_json(
+            include: {
+                features: {
+                    include: :feature_values
+                }
+            }
+        )
+    end
 end
