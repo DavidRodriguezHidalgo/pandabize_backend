@@ -17,3 +17,6 @@ rake db:seeds
 And run the project:
 
 docker-compose up
+
+
+In /admin, you have rails admin installed so you will be able to define limits, new brands, new feature and new feature values for the frontend
