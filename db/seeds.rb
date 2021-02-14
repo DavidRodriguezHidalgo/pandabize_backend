@@ -26,6 +26,14 @@ feature_value_4 = FeatureValue.create(value: 'blue', feature: feature2)
 feature_value_5 = FeatureValue.create(value: 'black', feature: feature2)
 feature_value_6 = FeatureValue.create(value: 'green', feature: feature2)
 
+FeatureValue.create(value: 'blue', feature: feature3)
+FeatureValue.create(value: 'black', feature: feature3)
+FeatureValue.create(value: 'green', feature: feature3)
+
+FeatureValue.create(value: '17', feature: feature4)
+FeatureValue.create(value: '19', feature: feature4)
+FeatureValue.create(value: '21', feature: feature4)
+
 feature_value_7 = FeatureValue.create(value: 'red', feature: feature5)
 FeatureValue.create(value: 'yellow', feature: feature5)
 
