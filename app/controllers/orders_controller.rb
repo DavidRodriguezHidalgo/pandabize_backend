@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-    protect_from_forgery :except => [:create]
     def index
         render json: Order.all
     end
@@ -11,6 +10,6 @@ class OrdersController < ApplicationController
     private
 
     def order_params
-        params.require(:order).permit(items: [:product, :quantity, :price, selected_features: [:feature, :feature_value]]) unless params[:order].blank?
+        params.require(:order).permit(items: [:product_id, :quantity, selected_features: [:feature, :feature_value]]) unless params[:order].blank?
     end
 end

@@ -1,83 +1,20 @@
 FactoryBot.define do
   factory :order do
-    amount { 10.0 }
-    items { 
-      [
-        {
-          product: 'test product',
-          quantity: 1,
-          price: 17.50, 
-          selected_features: [
-            {feature: 'wheel size',  feature_value: '17'},
-            {feature: 'color', feature_value: 'yellow'}
-          ]
-        }
-      ]
-    }
-    trait :invalid_product_quantity do
-      items { 
-        [
-          {
-            product_id: 1, 
-            price: 17.50, 
-            selected_features: [
-              {feature: 'wheel size' }
-            ]
-          }
+    before(:create) do |order|
+      brand = create(:brand)
+      feature = create(:feature)
+      feature_value = create(:feature_value, feature: feature)
+      order.amount = brand.price
+      order.items = []
+      order.items.push({
+        product_id: brand.id,
+        quantity: 1,
+        price: brand.price,
+        selected_features: [
+          feature: feature.name,
+          feature_value: feature_value.value
         ]
-      }
+      })
     end
-    trait :invalid_product_price do
-      items { 
-        [
-          {
-            product_id: 1, 
-            quantity: 1,
-            selected_features: [
-              {feature: 'wheel size' }
-            ]
-          }
-        ]
-      }
-    end
-    trait :invalid_selected_features_array do
-      items { 
-        [
-          {
-            product: 'test product', 
-            quantity: 1,
-            price: 17.50,
-            selected_features: {}
-          }
-        ]
-      }
-    end
-    trait :invalid_selected_features do
-      items { 
-        [
-          {
-            product: 'test product',
-            quantity: 1,
-            price: 17.50,  
-            selected_features: []
-          }
-        ]
-      }
-    end
-    trait :invalid_selected_features_without_value do
-      items { 
-        [
-          {
-            product_id: 1,
-            quantity: 1,
-            price: 17.50,  
-            selected_features: [
-              {feature: 'wheel size' }
-            ]
-          }
-        ]
-      }
-    end
-  
   end
 end

@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe OrdersController, type: :request do
     context 'we should get all the orders' do
-        let!(:order1){	create(:order)	}
-        let!(:order2){	create(:order)	}
+        let!(:order1){  create(:order)  }
+        let!(:order2){  create(:order)  }
 
         before(:each) do
             get '/orders'
@@ -17,18 +17,20 @@ RSpec.describe OrdersController, type: :request do
     end
     
     context 'we should be able to create an order' do
+        let(:brand) {create(:brand)}
+        let(:feature) {create(:feature)}
+        let(:feature_value) {create(:feature_value, feature: feature)}
         before do
             payload = {
                 order: {
                     items: [
                         {
-                            product: 'Treck',
+                            product_id: brand.id,
                             quantity: 2,
-                            price: 25.75,
                             selected_features: [
                                 {
-                                    feature: "Wheel size",
-                                    feature_value: "15"
+                                    feature: feature.name,
+                                    feature_value: feature_value.value
                                 }
                             ]
                         }
@@ -40,11 +42,11 @@ RSpec.describe OrdersController, type: :request do
         end
 
         it 'returns the amount' do
-            expect(JSON.parse(response.body)['amount']).to eq(@first_item[:quantity] * @first_item[:price])
+            expect(JSON.parse(response.body)['amount']).to eq(@first_item[:quantity].to_i * brand.price)
         end
 
         it 'returns the product' do
-            expect(JSON.parse(response.body)['items'].first['product']).to eq(@first_item[:product])
+            expect(JSON.parse(response.body)['items'].first['product_id']).to eq(brand.id)
         end
 
         it 'returns the price' do

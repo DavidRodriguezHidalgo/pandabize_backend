@@ -1,10 +1,41 @@
 require 'rails_helper'
 
 RSpec.describe Order, type: :model do
+
   let(:order_valid){  create(:order)  }
-  let(:order_invalid_array){  build(:order, :invalid_selected_features_array)  }
-  let(:order_invalid_features){  build(:order, :invalid_selected_features)  }
-  let(:order_invalid_value){  build(:order, :invalid_selected_features_without_value)  }
+  let(:order_invalid_array){  build(:order, items: [])  }
+  
+
+  let(:brand) {create(:brand)}
+  let(:feature) {create(:feature)}
+  let(:feature_value) {create(:feature_value, feature: feature)}
+
+  let(:order_invalid_features){ build(:order, items: [
+    {
+      product_id: brand.id,
+      quantity: 1,
+      price: brand.price,
+      selected_features: [
+        {
+          feature_value: feature_value.value
+        }
+      ]
+    }
+  ])}
+
+  let(:order_invalid_value){  build(:order, items: [
+    {
+      product_id: brand.id,
+      quantity: 1,
+      price: brand.price,
+      selected_features: [
+        {
+          feature: feature.name
+        }
+      ]
+    }
+    ]) 
+  }
 
   describe Order do
     it 'creates an order with valid params' do

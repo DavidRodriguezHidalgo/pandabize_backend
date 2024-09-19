@@ -1,7 +1,5 @@
 class Brand < ApplicationRecord
-    default_scope { where("stock > ?", 0) }
-    
-    has_many :features, dependent: :destroy
-    
-    validates_presence_of [:name, :price, :stock]
+  has_and_belongs_to_many :features
+      
+  validates_presence_of [:name, :price]
 end

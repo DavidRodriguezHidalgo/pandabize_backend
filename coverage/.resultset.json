@@ -1,0 +1,621 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/app/spec/spec_helper.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/app/config/environment.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          null,
+          1
+        ]
+      },
+      "/app/config/application.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/app/config/boot.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1
+        ]
+      },
+      "/app/config/environments/test.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/app/config/initializers/cors.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/app/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/spec/factories/brands.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          23,
+          23,
+          null,
+          null
+        ]
+      },
+      "/app/spec/factories/feature_values.rb": {
+        "lines": [
+          1,
+          1,
+          18,
+          null,
+          null
+        ]
+      },
+      "/app/spec/factories/features.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          19,
+          null,
+          null
+        ]
+      },
+      "/app/spec/factories/orders.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/config/routes.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/app/app/controllers/brands_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/app/spec/controllers/feature_values_controller_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/app/controllers/feature_values_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/spec/controllers/features_controller_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          3,
+          3,
+          3,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/app/controllers/features_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/app/spec/controllers/orders_controller_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          3,
+          3,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          6,
+          6,
+          6,
+          1,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          5,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/app/controllers/orders_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null,
+          1,
+          null,
+          1,
+          5,
+          null,
+          null
+        ]
+      },
+      "/app/spec/models/order_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          2,
+          2,
+          null,
+          null,
+          3,
+          3,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/app/app/models/order.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          10,
+          10,
+          10,
+          10,
+          10,
+          null,
+          10,
+          null,
+          null,
+          1,
+          14,
+          null,
+          null
+        ]
+      },
+      "/app/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/app/app/models/brand.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/app/app/models/feature.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/app/app/models/feature_value.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/app/app/models/limit.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/app/app/validators/order_validator.rb": {
+        "lines": [
+          1,
+          1,
+          14,
+          14,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          12,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1726652794
+  }
+}

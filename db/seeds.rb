@@ -1,22 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+brand1 = Brand.create(name: 'Trek', price: 19.99)
+Brand.create(name: 'Norco', price: 39.99)
+brand3 = Brand.create(name: 'Schwinn', price: 39.99)
 
+feature1 = Feature.create(name: 'Wheel Size', brands: [brand1])
+feature2 = Feature.create(name: 'Rim Color', brands: [brand1])
+feature3 = Feature.create(name: 'Saddle Color', brands: [brand1])
 
-brand1 = Brand.create(name: 'Trek', price: 19.99, stock: 20)
-Brand.create(name: 'Norco', price: 39.99, stock: 0)
-brand3 = Brand.create(name: 'Schwinn', price: 39.99, stock: 30)
-
-feature1 = Feature.create(name: 'Wheel Size', brand_id: brand1.id)
-feature2 = Feature.create(name: 'Rim Color', brand_id: brand1.id)
-feature3 = Feature.create(name: 'Saddle Color', brand_id: brand1.id)
-
-feature4 = Feature.create(name: 'Wheel Size', brand_id: brand3.id)
-feature5 = Feature.create(name: 'Rim Color', brand_id: brand3.id)
+feature4 = Feature.create(name: 'Wheel Size', brands: [brand3])
+feature5 = Feature.create(name: 'Rim Color', brands: [brand3])
 
 feature_value_1 = FeatureValue.create(value: '17', feature: feature1)
 feature_value_2 = FeatureValue.create(value: '19', feature: feature1)
@@ -39,18 +30,16 @@ FeatureValue.create(value: 'yellow', feature: feature5)
 
 Order.create(items: [
     {
-        product: brand1.name, 
+        id: brand1.id, 
         quantity: 2,
-        price: brand1.price,
         selected_features: [
         {feature: feature1.name, feature_value: feature_value_1.value},
         {feature: feature2.name, feature_value: feature_value_5.value}
         ]
     },
     {
-        product: brand3.name, 
+        id: brand3.id,
         quantity: 1,
-        price: brand3.price,
         selected_features: [
         {feature: feature4.name, feature_value: feature_value_7.value}
         ]

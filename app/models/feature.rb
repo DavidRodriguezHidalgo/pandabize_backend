@@ -1,6 +1,6 @@
 class Feature < ApplicationRecord
-    belongs_to :brand
-    has_many :feature_values, dependent: :destroy
+  has_and_belongs_to_many :brands
+  has_many :feature_values, dependent: :destroy
 
-    validates_presence_of :name
+  validates_presence_of :name
 end

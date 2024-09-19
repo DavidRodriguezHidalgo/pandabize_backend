@@ -1,9 +1,8 @@
-class CreateBrands < ActiveRecord::Migration[6.0]
+class CreateBrands < ActiveRecord::Migration[7.2]
   def change
     create_table :brands do |t|
       t.string :name
       t.float :price
-      t.numeric :stock
 
       t.timestamps
     end

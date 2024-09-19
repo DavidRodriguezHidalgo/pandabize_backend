@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe FeaturesController, type: :request do
     context 'we should get all the features' do
-        let!(:brand){	create(:brand)	}
-        let!(:feature1){	create(:feature)	}
-        let!(:feature2){	create(:feature)	}
+        let!(:brand){ create(:brand)  }
+        let!(:feature1){  create(:feature)  }
+        let!(:feature2){  create(:feature)  }
 
         before(:each) do
             get '/features'
