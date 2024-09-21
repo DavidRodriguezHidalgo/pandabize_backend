@@ -48,3 +48,10 @@ group :test do
 end
 
 
+
+gem "graphql", "~> 2.3"
+
+gem "graphiql-rails", "~> 1.10"
+
+gem "sprockets-rails", "~> 3.5"
+

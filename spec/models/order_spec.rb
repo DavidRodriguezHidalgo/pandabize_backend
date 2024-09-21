@@ -17,7 +17,7 @@ RSpec.describe Order, type: :model do
       price: brand.price,
       selected_features: [
         {
-          feature_value: feature_value.value
+          feature_value_id: feature_value.id
         }
       ]
     }
@@ -30,7 +30,7 @@ RSpec.describe Order, type: :model do
       price: brand.price,
       selected_features: [
         {
-          feature: feature.name
+          feature_id: feature.id
         }
       ]
     }
