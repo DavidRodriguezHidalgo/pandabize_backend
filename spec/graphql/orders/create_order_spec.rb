@@ -27,8 +27,6 @@ describe 'Create an order', type: :request do
         createOrder(
           items: [{productId: #{product_id}, quantity: #{quantity}, selectedFeatures: [{featureId: "#{feature}", featureValueId: "#{feature_value}"}]}]
         ){
-          id
-          amount
           items{
             productId
             quantity
